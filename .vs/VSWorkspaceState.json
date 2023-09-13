@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Алгоритмизация",
+    "\\Олимпиадки"
   ],
-  "SelectedNode": "\\Олимпиадки",
+  "SelectedNode": "\\Алгоритмизация\\alg.cs",
   "PreviewInSolutionExplorer": false
 }
