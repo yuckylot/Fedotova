@@ -19,6 +19,7 @@ l = 7
 m = 10
 n = 5
 k = [1, 2, 3, 20]
+##
 
 print(formula())
 print(cycle())
