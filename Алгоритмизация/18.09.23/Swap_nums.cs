@@ -6,14 +6,15 @@ namespace Swap_Nums
     {
         public static void Sn()
         {
-            int a, b;
-            a = Convert.ToInt32(Console.ReadLine());
-            b = Convert.ToInt32(Console.ReadLine());
-            a = a + b;
-            b = a - b;
-            a = a - b;
-            Console.WriteLine(a);
-            Console.WriteLine(b);
+            int num1, num2;
+            Console.WriteLine("¬ведите первое число:");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("¬ведите второе число:");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            num1 = num1 + num2;
+            num2 = num1 - num2;
+            num1 = num1 - num2;
+            Console.WriteLine(num1 + " " + num2);
             Console.ReadLine();
         }
     }

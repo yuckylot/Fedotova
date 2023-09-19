@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Swap_Nums;
+using Times;
+using Min_Max;
+
+
 
 namespace _18._09._23
 {
@@ -11,7 +15,28 @@ namespace _18._09._23
     {
         static void Main()
         {
-            Swap_Nums.Programm.Sn();
+            string a;
+            Console.WriteLine("1. Swap_Nums");
+            Console.WriteLine("2. Times");
+            Console.WriteLine("3. Min-Max");
+            a = Console.ReadLine();
+            if (a == "1") 
+            {
+                Console.WriteLine(" ");
+                Swap_Nums.Programm.Sn();
+            }
+            if (a == "2")
+            {
+                Console.WriteLine(" ");
+                Times.Programm.Times();
+            }
+            if (a == "3")
+            {
+                Console.WriteLine(" ");
+                Min_Max.Programm.MM();
+
+            }
+                
         }
     }
 }
