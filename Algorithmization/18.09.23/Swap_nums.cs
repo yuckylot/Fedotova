@@ -7,9 +7,9 @@ namespace Swap_Nums
         public static void Sn()
         {
             int num1, num2;
-            Console.WriteLine("¬ведите первое число:");
+            Console.WriteLine("Enter first number:");
             num1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("¬ведите второе число:");
+            Console.WriteLine("Enter second number:");
             num2 = Convert.ToInt32(Console.ReadLine());
             num1 = num1 + num2;
             num2 = num1 - num2;

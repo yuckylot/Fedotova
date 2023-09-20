@@ -7,9 +7,9 @@ namespace Min_Max
         public static void MM()
         {
             int num1, num2, modul, minn, maxx;
-            Console.WriteLine("¬ведите первое число:");
+            Console.WriteLine("Enter first number:");
             num1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("¬ведите второе число:");
+            Console.WriteLine("Enter second number:");
             num2 = Convert.ToInt32(Console.ReadLine());
             modul = Math.Abs(num1 - num2);
             minn = (num1 - modul + num2) / 2;

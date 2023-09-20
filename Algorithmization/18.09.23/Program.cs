@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 using Swap_Nums;
 using Times;
 using Min_Max;
-
-
+using System.Runtime.ConstrainedExecution;
 
 namespace _18._09._23
 {
@@ -19,6 +18,9 @@ namespace _18._09._23
             Console.WriteLine("1. Swap_Nums");
             Console.WriteLine("2. Times");
             Console.WriteLine("3. Min-Max");
+
+            Console.WriteLine(" ");
+            Console.WriteLine("Please enter program number:");
             a = Console.ReadLine();
             if (a == "1") 
             {
