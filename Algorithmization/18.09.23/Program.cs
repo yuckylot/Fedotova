@@ -38,6 +38,10 @@ namespace _18._09._23
                 Min_Max.Programm.MM();
 
             }
+            else
+            {
+                Console.WriteLine("ERROR");
+            }
                 
         }
     }
