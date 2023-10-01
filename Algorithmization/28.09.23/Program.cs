@@ -1,12 +1,24 @@
 ﻿using System;
-
-namespace Program
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using sgn_change
+    
+    ;
+namespace Programm
 {
-    class Programm
+    internal class Programm
     {
-        public static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("hui");
+            Console.WriteLine("Выберите программу:");
+            int n = Convert.ToInt32(Console.ReadLine());
+            if (n == 1)
+            {
+                sgn_change.sgn_cha.sc();
+                Console.ReadLine();
+            }
         }
     }
 }
