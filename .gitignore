@@ -1,11 +1,3 @@
-.git
-.vs
-bin
-obj
-Properties
-.csproj
-.sln
-App.config
 input1.txt
 input2.txt
 input3.txt
