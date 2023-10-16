@@ -1,56 +1,54 @@
 ﻿using System;
 using System.Linq;
-using System.Reflection;
 
-// дано К мышек одна белая все остальные серые мыши сидят по кругу кот начинает сьедать каждую М мышку
-// оперделить с какой мышки кот должен сьедать каждую М мышь чтобы в конце осталась одна белая мышка
-// Ограничения: полный перебор нельзя
-// позицию превой мыши в самом начале
-
-// подсказка смещаться от стокового значения на число
-
-namespace Cat_Mouse
+// Дано K мышек из них одна белая, остальные серые. Мышки сидят по кругу.
+// Код начинает съедать каждую M мышку.
+// Определить, с какой мышки кот должен съедать каждую M, чтобы
+// в конце осталась одна белая мышка.
+// ! Полный перебор использовать нельзя.
+// ! Позиция белой мышки задается в самом начале.
+class CatAndMice
 {
-    class programm
+    public static void Main(string[] args)
     {
-        static void Main()
+        int K = Convert.ToInt32(Console.ReadLine()); // Кол-во мышей
+        int M = Convert.ToInt32(Console.ReadLine()); // Укус
+        int white = Convert.ToInt32(Console.ReadLine()); // Положение белой
+
+        int[] mice = new int[K];
+        for (int i = 0; i < K; i++)
         {
-            Console.WriteLine("Enter count of mice:");
-            int k = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter bite:");
-            int m = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter position");
-            int pos = Convert.ToInt32(Console.ReadLine());
-
-            int cat_pos = 0;
-
-            int[] mice = new int[k];
-            for  (int i = 0; i < k; i++)
-            {
-                mice[i] = 1;
-                Console.WriteLine("[{0}]", string.Join(",", mice));
-            }
-            Console.WriteLine(mice.Count(j => j == 1));
-
-            cat_pos = cat_pos + m;
-            mice[cat_pos] = 0;
-            int delta = 0;
-            Console.WriteLine("[{0}]", string.Join(",", mice));
-            while (mice.Count(j => j == 1) > 1 )
-            {
-                if (cat_pos + 1 + m > k)
-                {
-                    delta = k - (cat_pos + 1);
-                    cat_pos = m - delta - 1;
-
-                }
-                else 
-                { 
-                    cat_pos += m; 
-                }
-                mice[cat_pos] = 0;
-                Console.WriteLine("[{0}]", string.Join(",", mice));
-            }
+            mice[i] = 0;
         }
+
+        int pointer = 0;
+        mice[pointer] = 1;
+
+        while (mice.Count(c => c == 0) > 0)
+        {
+            int moved = 0;
+
+            while (moved != M)
+            {
+                ++pointer;
+
+                if (pointer > K - 1)
+                {
+                    pointer = 0;
+                }
+
+                if (mice[pointer] == 0)
+                {
+                    ++moved;
+                }
+            }
+
+            mice[pointer] = 1;
+        }
+
+        int difference = pointer - white;
+        int answer = (K - difference) % K;
+
+        Console.WriteLine("Ответ: {0}", answer);
     }
 }
