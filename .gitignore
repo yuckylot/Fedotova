@@ -8,3 +8,8 @@ input7.txt
 input8.txt
 input9.txt
 input10.txt
+.vs 
+bin
+obj
+.csproj
+.sln
