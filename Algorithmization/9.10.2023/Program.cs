@@ -11,9 +11,9 @@ class CatAndMice
 {
     public static void Main(string[] args)
     {
-        int K = Convert.ToInt32(Console.ReadLine()); // Кол-во мышей
-        int M = Convert.ToInt32(Console.ReadLine()); // Укус
-        int white = Convert.ToInt32(Console.ReadLine()); // Положение белой
+        int K = Convert.ToInt32(Console.ReadLine());
+        int M = Convert.ToInt32(Console.ReadLine());
+        int white = Convert.ToInt32(Console.ReadLine());
 
         int[] mice = new int[K];
         for (int i = 0; i < K; i++)
