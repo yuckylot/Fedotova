@@ -1,3 +1,5 @@
+# Задача с Разведкой
+
 import math
 
 def razv(n):

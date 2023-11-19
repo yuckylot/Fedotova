@@ -1,4 +1,5 @@
 ## Задача с пакетами молока с занятия 26.09.23
+
 filename = "input1.txt"
 with open(filename, "rt") as f:
     n = int(f.readline())
