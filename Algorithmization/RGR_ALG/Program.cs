@@ -70,11 +70,11 @@ namespace rgr
                 {
                     if (playersNumber > numberToFind)
                     {
-                        Console.WriteLine("| MISS number you need is less"); 
+                        Console.WriteLine("| Number you need is less"); 
                     }
                     else
                     {
-                        Console.WriteLine("| MISS number you need is bigger");
+                        Console.WriteLine("| Number you need is bigger");
                     }
                 }
                 else if (playersNumber == numberToFind)
