@@ -85,7 +85,7 @@ namespace rgr
                 }
                 if (GameModeTurns) { Console.WriteLine("| Turns left: " + (countOfTrurns-i-1)); }
             }
-            if (suc) { Console.WriteLine("+--- You lost, sorry "); }
+            if (suc) { Console.WriteLine("+--- You lose, sorry "); }
 
         }
     }
