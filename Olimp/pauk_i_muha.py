@@ -1,3 +1,5 @@
+# паук и муха
+
 import math
 
 a, b, c = map(int, input('Введите размеры комнаты: ').split())
