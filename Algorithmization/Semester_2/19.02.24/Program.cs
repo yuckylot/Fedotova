@@ -4,21 +4,38 @@ using System.Collections;
 using System.ComponentModel.DataAnnotations;
 using System.Buffers.Binary;
 using System.Collections.Immutable;
+using System.Drawing;
 
 namespace Task
 {
     class Program
     {
+        public static int ReadNum() // метод валидирующий ввод вместо -> Convert.ToInt32(Console.ReadLine())
+        {
+            string num = "";
+            bool flag = false;
+            while (!flag)
+            {
+                num = Console.ReadLine() ?? "";
+                if (int.TryParse(num, out int n))
+                {
+
+                    flag = true;
+                }
+            }
+            return Convert.ToInt32(num);
+        }
         static void Main(string[] args)
         {
 
             Console.WriteLine("1. Array");
             Console.WriteLine("Enter Length of Array");
-            int len = Convert.ToInt32(Console.ReadLine());
+            int len = ReadNum();
             int[] arr = new int[len];
+            Console.WriteLine("Enter NUmbers");
             for (int i = 0; i < len; i++)
             {
-                arr[i] = Convert.ToInt32(Console.ReadLine());
+                arr[i] = ReadNum();
             }
 
             while (true)
@@ -45,7 +62,7 @@ namespace Task
                 else if (a == "2")
                 {
                     Console.WriteLine("Enter needed number");
-                    int num = Convert.ToInt32(Console.ReadLine());
+                    int num = ReadNum();
                     Array.Sort(arr);
                     Console.Write(Array.BinarySearch(arr, num));
                     Console.ReadKey();
@@ -61,21 +78,21 @@ namespace Task
                 {
 
                     Console.WriteLine("Enter needed number");
-                    int num = Convert.ToInt32(Console.ReadLine());
+                    int num = ReadNum();
                     Console.WriteLine(Array.Find(arr, elem => elem == num));
                     Console.ReadKey();
                 }
                 else if (a == "5")
                 {
                     Console.WriteLine("Enter needed number");
-                    int num = Convert.ToInt32(Console.ReadLine());
+                    int num = ReadNum();
                     Console.WriteLine(Array.FindLast(arr, elem => elem == num));
                     Console.ReadKey();
                 }
                 else if (a == "6")
                 {
                     Console.WriteLine("Enter needed number");
-                    int num = Convert.ToInt32(Console.ReadLine());
+                    int num = ReadNum();
                     Console.WriteLine(Array.IndexOf(arr, num));
                     Console.ReadKey();
                 }
@@ -83,13 +100,14 @@ namespace Task
                 {
                     int[] new_arr = new int[arr.Length];
                     Array.Copy(arr, new_arr, arr.Length);
-                    Array.Reverse(arr);
+                    Array.Reverse(new_arr);
                     foreach ( int i in new_arr) { Console.WriteLine(i); }
+                    Console.ReadKey();
                 }
                 else if (a == "8")
                 {
                     Console.WriteLine("Enter needed Lenght of array");
-                    int size = Convert.ToInt32(Console.ReadLine());
+                    int size = ReadNum();
                     int[] new_arr = arr;
                     Array.Resize(ref new_arr, size);
                     foreach ( int i in new_arr) { Console.WriteLine(i); }
