@@ -88,7 +88,18 @@ namespace Task
                 }
                 else if (a == "8")
                 {
-
+                    Console.WriteLine("Enter needed Lenght of array");
+                    int size = Convert.ToInt32(Console.ReadLine());
+                    int[] new_arr = arr;
+                    Array.Resize(ref new_arr, size);
+                    foreach ( int i in new_arr) { Console.WriteLine(i); }
+                    Console.ReadKey();
+                }
+                else if (a == "9")
+                {
+                    Array.Sort(arr);
+                    foreach (int i in arr) { Console.WriteLine(i); }
+                    Console.ReadKey();
                 }
             }
         }
