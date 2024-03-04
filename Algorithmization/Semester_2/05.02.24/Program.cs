@@ -212,7 +212,7 @@ namespace Uni
         {
 
         }
-        static void Main()
+        public static void Mene()
         {
             List<Auditor> Auds = new List<Auditor>() {};
             while (true)
@@ -440,5 +440,12 @@ namespace Uni
             }
 
         }
+    }
+    class Programm { 
+        static void Main()
+        {
+            Menu.Mene();
+        }
+    
     }
 }
