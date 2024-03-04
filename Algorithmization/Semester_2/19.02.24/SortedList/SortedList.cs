@@ -6,4 +6,4 @@ using System.Buffers.Binary;
 using System.Collections.Immutable;
 using System.Drawing;
 
-//ArrayList:   Count, BinSearch, Copy, IndexOf, Insert, Reverse, Sort, Add
+//SortedList: Add, IndexOf и по ключу и по значению, Вывод ключа по индексу, Вывод значения по индексу
