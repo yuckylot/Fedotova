@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 class Skobki
 {
-    public static void Main(string[] args)
+    public static void Maisn(string[] args)
     {
         Console.WriteLine("Enter String");
         string str = Console.ReadLine() ?? "";
