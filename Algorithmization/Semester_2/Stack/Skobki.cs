@@ -2,13 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 
-class Program
+class Skobki
 {
     public static void Main(string[] args)
     {
         Console.WriteLine("Enter String");
-        string str = Console.ReadLine();
-        char[] parens = new char[] { '(', ')', '[', ']', '{', '}' };
+        string str = Console.ReadLine() ?? "";
+        char[] parens = ['(', ')', '[', ']', '{', '}'];
 
         Stack<char> stack = new Stack<char>();
 
