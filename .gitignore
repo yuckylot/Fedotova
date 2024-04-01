@@ -11,5 +11,7 @@ input10.txt
 .vs 
 bin
 obj
-.csproj
-.sln
+*.csproj
+*.sln
+.idea
+
