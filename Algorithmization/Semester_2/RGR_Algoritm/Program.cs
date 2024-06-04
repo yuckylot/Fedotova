@@ -122,6 +122,12 @@ namespace Yuckylot
                     Console.WriteLine($"Решение: {stack.Pop()}");
                     Console.ReadKey();
                 }
+                else 
+                {
+                    Console.WriteLine("Неверная запись");
+                    Console.ReadKey();
+                }
+
             }
             else
             {
